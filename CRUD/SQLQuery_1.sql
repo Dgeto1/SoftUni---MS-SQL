@@ -9,6 +9,3 @@ SELECT FirstName, LastName, JobTitle from Employees where Salary between 20000 a
 SELECT FirstName+' '+MiddleName+' '+LastName as 'Full Name' from Employees where Salary in (25000, 14000, 12500, 23600)
 SELECT FirstName, LastName From Employees where ManagerID is null
 SELECT FirstName, LastName, Salary from Employees where Salary>=50000 ORDER BY Salary DESC
-SELECT TOP 5 FirstName, LastName from Employees ORDER BY Salary DESC
-SELECT FirstName, LastName FROM Employees where DepartmentID != 4
-SELECT * FROM Employees ORDER BY Salary DESC,  FirstName ASC, LastName ASC, MiddleName ASC 
