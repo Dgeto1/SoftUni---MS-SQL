@@ -12,3 +12,14 @@ SELECT FirstName, LastName, Salary from Employees where Salary>=50000 ORDER BY S
 SELECT TOP 5 FirstName, LastName from Employees ORDER BY Salary DESC
 SELECT FirstName, LastName FROM Employees where DepartmentID != 4
 SELECT * FROM Employees ORDER BY Salary DESC,  FirstName ASC, LastName ASC, MiddleName ASC 
+
+CREATE VIEW V_EmployeesSalaries AS
+SELECT FirstName, LastName, Salary FROM Employees
+SELECT * FROM V_EmployeesSalaries
+
+CREATE VIEW V_EmployeeNameJobTitle AS
+SELECT FirstName+' '+ MiddleName+' '+LastName as 'Full Name', JobTitle from Employees
+UPDATE V_EmployeeNameJobTitle
+SET [Full Name] = ''
+Where [Full Name] is NULL;
+SELECT * From V_EmployeeNameJobTitle
